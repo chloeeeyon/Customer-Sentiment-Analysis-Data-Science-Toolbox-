@@ -27,13 +27,15 @@ with st.echo():
 ##################Read data##################
 st.text(" \n")
 st.write("- Import the dataset")
-with st.echo():
-    df = pd.read_csv("D:/Python Files/Datasets/Womens Clothing E-Commerce Reviews.csv")
-    df.head()
+#with st.echo():
+    #df = pd.read_csv("D:/Python Files/Datasets/Womens Clothing E-Commerce Reviews.csv")
+    #df.head()
    
        
 def load_data():
-    data = pd.read_csv("D:/Python Files/Datasets/Womens Clothing E-Commerce Reviews.csv")
+    url = 'google drive sharing link'
+    path = 'https://drive.google.com/file/d/1JPiDQfXf1gQskM-PC5yjbKmIFm22-TaC/view?usp=sharing'+url.split('/')[-2]
+    data = pd.read_csv(path)
     return data    
 
 df = load_data()
